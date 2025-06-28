@@ -1,0 +1,128 @@
+:root {
+  /* Typography */
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+
+  /* Light Theme Colors */
+  --color-bg-light: #ffffff;
+  --color-text-light: #213547;
+  --color-link-light: #646cff;
+  --color-link-hover-light: #747bff;
+  --color-button-bg-light: #f0f0f0;
+
+  /* Dark Theme Colors */
+  --color-bg-dark: #1e1e1e;
+  --color-text-dark: rgba(255, 255, 255, 0.87);
+  --color-link-dark: #8da4ff;
+  --color-link-hover-dark: #aab3ff;
+  --color-button-bg-dark: #2c2c2c;
+
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg-dark);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------
+   Global Elements
+---------------------------- */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-link-dark);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover-dark);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0.5em 0;
+}
+
+/* ----------------------------
+   Buttons
+---------------------------- */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.4em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-button-bg-dark);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  border-color: var(--color-link-dark);
+  background-color: #2f2f2f;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 2px;
+}
+
+/* ----------------------------
+   Light Mode Overrides
+---------------------------- */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-text-light);
+    background-color: var(--color-bg-light);
+  }
+
+  body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+  }
+
+  a {
+    color: var(--color-link-light);
+  }
+
+  a:hover {
+    color: var(--color-link-hover-light);
+  }
+
+  button {
+    background-color: var(--color-button-bg-light);
+    color: var(--color-text-light);
+  }
+
+  button:hover {
+    background-color: #e0e0e0;
+    border-color: var(--color-link-light);
+  }
+}
